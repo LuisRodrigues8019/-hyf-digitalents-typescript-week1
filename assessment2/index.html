@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="main.css" />
+    <title>HYF - Week 1</title>
+    <script async type="module" src="main.js"></script>
+  </head>
+  <body>
+    <h1 class="title">Ceaser's Cipher</h1>
+    <img src="./img/caesar-scaled.jpeg" alt="" srcset="">
+    <div id="app" class="container">
+      <div class="box1">
+        <form>
+          <label for="shift">Shift:</label>
+          <select name="shift" id="shift">
+            <option value="-">choose a shift</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </form>
+
+        <h2>Text</h2>
+        <textarea id="plaintext"></textarea>
+
+        <h2>Decrypted</h2>
+        <textarea readonly id="encryptedtext"></textarea>
+      </div>
+      <div class="box2">
+        <h1>How it works</h1>
+        <p>
+          It is a type of substitution cipher <br> which each letter in the
+          plaintext is replaced <br> by a letter some fixed number <br> of positions down
+          the alphabet.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
