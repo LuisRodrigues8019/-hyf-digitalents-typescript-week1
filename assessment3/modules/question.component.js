@@ -1,4 +1,9 @@
-const createQuestion = ({ question, correctAnswer, incorrectAnswers }) => {
+const createQuestion = ({
+  question,
+  correctAnswer,
+  incorrectAnswers,
+  category,
+}) => {
   // Concat the answers and shuffle them
   const allAnswers = [correctAnswer, ...incorrectAnswers]
     .map((value) => ({ value, sort: Math.random() }))
@@ -11,7 +16,7 @@ const createQuestion = ({ question, correctAnswer, incorrectAnswers }) => {
   // Add an element with id "questionCategory" to the HTML and set the value to based on the category property
   $question.innerHTML = `
         <h1>${question}</h1>
-        
+        <h2 id="questionCategory">Category:${category}</h2>
         <form class="question-options" action="">
             <input type="radio" name="answer" id="answer1" value="${allAnswers[0]}">
             <label for="answer1">${allAnswers[0]}</label><br>
